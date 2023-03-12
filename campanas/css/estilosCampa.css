@@ -117,6 +117,9 @@ body {
 
 /* ### Sección de Campañas ###*/
 
+
+
+
 .campana001img{ 
     background-color: #E5E5F7;
 
@@ -124,15 +127,16 @@ body {
 
 .campana001img__container{ 
     display: grid;
-    /* Creación de tres columnas. 1fr es el espacio sobrante */
+    /* Creación de tres columnas. 1fr es el espacio sobrante */    
     grid-template-columns: 50px 1fr 50px;
     gap: 1em;
     align-items: center;
+    
 }
 
 .campana001img__body{ 
     display: grid;
-    grid-template-columns: 1fr max-content;
+    grid-template-columns: 1fr max-content ;
     justify-content: space-between;
     align-items: center;
     gap: 1em;
@@ -151,18 +155,18 @@ body {
 }
 
 .campana001img__img{ 
-    width: 1050px;
+    width:inherit;
     height: 250px;
     /*border-radius: 50%;*/
-    object-fit: cover;
-    /*object-position: 50% 30%;*/
+    object-fit:fill;
+    /*object-position: 50% 30%*/
 }
 .campana001img__arrow{ 
     width: 90%;
     cursor: pointer;
 }
 
-/* ### detalleCam para ponerle fondo ###*/
+/* ### detalleCam Campaña para ponerle fondo ###*/
 
 .detalleCam{   
     /* Bakcgrounds https://www.magicpattern.design/tools/css-backgrounds 
@@ -171,7 +175,24 @@ body {
     background-size: 20px 20px;
     background-position: 0 0,10px 10px;*/
     overflow: hidden;
+    
 
+}
+
+.containerE{
+    width: 90%;
+    
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    /*background-color: #28af49;*/
+    /* Referencia del root: para usar las varibles costumber propertire*/
+    padding: var(--padding-container);
+}
+
+.services{
+    /* se centra el texto 
+    text-align: center;*/
 }
 
 .detalleCam__container{ 
@@ -185,10 +206,10 @@ body {
 
 .detalleCam__text{ 
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5em;
-    align-items: center;
-    line-height: 1.4;
+    grid-template-columns: 2fr 2fr 2fr;
+    /*gap: 2.5em;*/
+    align-items:baseline;
+    /*line-height: 1.4;*/
 
 }
 
@@ -200,7 +221,7 @@ body {
 .detalleCam__topic{ 
     display: grid;
     grid-template-columns: 0.09fr 1fr ;
-    line-height: 1.7;
+    line-height: 1;
     margin-bottom: 15px;
     font-size: 1.0rem;
 }    
@@ -213,7 +234,10 @@ body {
 /* ### Fechas Disponibles fechas  ###*/
 
 .fechas{
+    
     text-align: center;
+    /*background-color: #E5E5F7;*/
+    
     
 
 }
@@ -223,6 +247,7 @@ body {
     gap: 2em;
     padding-top: 50px;
     padding-bottom: 100px;
+    
     
 }
 
@@ -428,7 +453,39 @@ body {
     color: #1D293F;*/
 }
 
+.subtitleMINI{
+    color: var(--color-title);
+    font-size: 1.2rem;
+    margin-bottom: 1px;
+    text-align: center;
+
+    /*font-size: 2.3rem;
+    margin-left:auto;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #1D293F;*/
+}
+.servicesTopic{
+    color:#000000ec;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-align: center;
+
+}
+
 .about__paragraph{
     line-height: 1.7;
 
+}
+
+.services__main{
+    padding-top: 80px;
+    display: grid;
+    /* Aqui podre ordenar de 3 iconos en la misma felia o hasta 4 */
+    width: 100%;
+    /*margin: 0 auto;
+    gap: 1em;
+    overflow:hidden;*/
+    /* columnas dinamicas */
+    grid-template-columns: repeat(auto-fit, minmax(260px,auto));
 }

@@ -7,6 +7,7 @@
     
     /* Esta linea sirve para mostrar o debugear los codigos en el navegador
     console.log(sliders) */
+    console.log(sliders);
 
     buttonNext.addEventListener('click', ()=>{
         changePosition(1);
@@ -19,6 +20,7 @@
     const changePosition = (add)=>{
         /* Esta linea sirve para mostrar o debugear los codigos en el navegador
         console.log(add);*/
+        console.log(add);
         const currentTestimony = document.querySelector('.testimony__body--show').dataset.id;
         value = Number(currentTestimony);
         value+= add;
